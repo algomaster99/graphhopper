@@ -32,4 +32,19 @@
         </dependency>
     </dependencies>
 
+    <profiles>
+        <profile>
+            <id>tree-merge</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <argLine>-Xmx190m -Xms190m -Duser.language=en -XX:AOTCacheOutput=cache.aot</argLine>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
